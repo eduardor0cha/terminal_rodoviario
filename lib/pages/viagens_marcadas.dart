@@ -34,17 +34,6 @@ class _ViagensMarcadasState extends State<ViagensMarcadas> {
             backgroundColor: Colors.transparent,
             systemOverlayStyle: null,
             elevation: 0,
-            leading: ElevatedButton(
-              child: Icon(
-                Icons.keyboard_arrow_left_rounded,
-                color: CoresApp.white,
-              ),
-              onPressed: () => {},
-              style: ElevatedButton.styleFrom(
-                shape: const CircleBorder(),
-                primary: CoresApp.lightRed,
-              ),
-            ),
             title: Text(
               'Viagens Marcadas',
               style: TextStyle(color: CoresApp.black),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:terminal_rodoviario/pages/viagens_marcadas.dart';
 
 import '../utils/app_colors.dart';
 
@@ -24,6 +25,7 @@ class _BarraNavegacaoState extends State<BarraNavegacao> {
       showSelectedLabels: false,
       showUnselectedLabels: false,
       currentIndex: widget.index,
+      onTap: (index) => handleTap(index),
       items: const [
         BottomNavigationBarItem(
           icon: Icon(Icons.home_outlined),
@@ -47,5 +49,58 @@ class _BarraNavegacaoState extends State<BarraNavegacao> {
         ),
       ],
     );
+  }
+
+  void handleTap(int index) {
+    if (widget.index != index) {
+      switch (index) {
+        case 0:
+          Navigator.pushReplacement(context,
+              MaterialPageRoute(builder: (context) {
+            return Scaffold(
+              body: Center(
+                child: Text(
+                  'Página 0',
+                  style: TextStyle(color: CoresApp.black),
+                ),
+              ),
+            );
+          }));
+          break;
+        case 1:
+          Navigator.pushReplacement(context,
+              MaterialPageRoute(builder: (context) {
+            return Scaffold(
+              body: Center(
+                child: Text(
+                  'Página 1',
+                  style: TextStyle(color: CoresApp.black),
+                ),
+              ),
+            );
+          }));
+          break;
+        case 2:
+          Navigator.pushReplacement(context,
+              MaterialPageRoute(builder: (context) {
+            return const ViagensMarcadas();
+          }));
+          break;
+        case 3:
+          Navigator.pushReplacement(context,
+              MaterialPageRoute(builder: (context) {
+            return Scaffold(
+              body: Center(
+                child: Text(
+                  'Página 3',
+                  style: TextStyle(color: CoresApp.black),
+                ),
+              ),
+            );
+          }));
+          break;
+        default:
+      }
+    }
   }
 }
