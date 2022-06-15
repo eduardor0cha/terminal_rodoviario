@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:terminal_rodoviario/domain/pesquisa.dart';
 import 'package:terminal_rodoviario/widgets/viagem_marcada_card.dart';
-
 import '../utils/app_colors.dart';
 import '../widgets/barra_navegacao.dart';
 import '../widgets/main_menu-card.dart';
@@ -27,10 +26,10 @@ class _MainMenuState extends State<MainMenu> {
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(100),
         child: Padding(
-          padding: const EdgeInsets.all(16),
+          padding: const EdgeInsets.only(bottom: 0, right: 16, left: 16, top: 16),
           child: AppBar(
             centerTitle: true,
-            backgroundColor: const Color(0xFFCF2B2B),
+            backgroundColor: Colors.transparent,
             systemOverlayStyle: null,
             elevation: 0,
             title: Text(

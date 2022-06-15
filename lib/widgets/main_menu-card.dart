@@ -23,22 +23,6 @@ class _MainMenuCardState extends State<MainMenuCard> {
         child: Column(
           children: [
             buildImage(),
-            Padding(
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    widget.pesquisa.pergunta,
-                    style: const TextStyle(
-                      fontSize: 21,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  const SizedBox(height: 8),
-                ],
-              ),
-            )
           ],
         ),
       ),
@@ -47,7 +31,9 @@ class _MainMenuCardState extends State<MainMenuCard> {
 
   buildImage() {
     return Stack(
+      alignment: FractionalOffset.bottomLeft,
       children: [
+
         ClipRRect(
           borderRadius: const BorderRadius.vertical(
             top: Radius.circular(8),
@@ -55,10 +41,19 @@ class _MainMenuCardState extends State<MainMenuCard> {
           child: Image.network(widget.pesquisa.imagem),
         ),
         Container(
-          child: const Text(
-            'Qual o seu destino?',
-            style: TextStyle(
-                fontSize: 15, color: Colors.white, fontWeight: FontWeight.bold),
+          child: Column(
+            children: const [
+              Text('Qual o seu destino?',
+                style: TextStyle(
+                    fontSize: 15, color: Colors.white, fontWeight: FontWeight.bold),
+              ),
+              Text('Pesquise aqui...',
+                style: TextStyle(
+                    fontSize: 15, color: Colors.white, fontWeight: FontWeight.bold,
+
+                ),
+              ),
+            ],
           ),
           decoration: const BoxDecoration(
             color: Color(0xFFA9A9A9),
@@ -66,7 +61,7 @@ class _MainMenuCardState extends State<MainMenuCard> {
               Radius.circular(16),
             ),
           ),
-          margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 18),
+          margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
         ),
       ],
