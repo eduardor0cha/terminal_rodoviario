@@ -82,7 +82,7 @@ class _LinhasEHorariosState extends State<LinhasEHorarios> {
           ),
         ],
       ),
-      bottomNavigationBar: const BarraNavegacao(index: 1),
+      bottomNavigationBar: const BarraNavegacao(index: 2),
     );
   }
 }
