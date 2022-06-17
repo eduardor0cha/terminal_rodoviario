@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:terminal_rodoviario/pages/linhas_e_horarios.dart';
 import 'package:terminal_rodoviario/pages/viagens_marcadas.dart';
 
 import '../utils/app_colors.dart';
@@ -70,14 +71,7 @@ class _BarraNavegacaoState extends State<BarraNavegacao> {
         case 1:
           Navigator.pushReplacement(context,
               MaterialPageRoute(builder: (context) {
-            return Scaffold(
-              body: Center(
-                child: Text(
-                  'Página 1',
-                  style: TextStyle(color: CoresApp.black),
-                ),
-              ),
-            );
+            return LinhasEHorarios();
           }));
           break;
         case 2:
