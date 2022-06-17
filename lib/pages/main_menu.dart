@@ -14,7 +14,7 @@ class MainMenu extends StatefulWidget {
 
 class _MainMenuState extends State<MainMenu> {
   Pesquisa pesquisa1 = Pesquisa(
-    imagem: 'https://www.rodoviarianatal.com.br/wp-content/uploads/2019/05/foto4.jpg',
+    imagem: "https://agenciabrasilia.df.gov.br/wp-conteudo/uploads/2019/10/entorno.jpg",
     pergunta: 'Qual o seu destino?', 
     resposta: 'Pesquise aqui...',
   );
