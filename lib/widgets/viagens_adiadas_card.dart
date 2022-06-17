@@ -5,16 +5,16 @@ import '../domain/viagem.dart';
 import '../utils/app_colors.dart';
 import '../utils/formatador_numero.dart';
 
-class ViagemMarcadaCard extends StatefulWidget {
+class ViagemAdiadaCard extends StatefulWidget {
   final Viagem viagem;
 
-  const ViagemMarcadaCard({Key? key, required this.viagem}) : super(key: key);
+  const ViagemAdiadaCard({Key? key, required this.viagem}) : super(key: key);
 
   @override
-  State<ViagemMarcadaCard> createState() => _ViagemMarcadaCardState();
+  State<ViagemAdiadaCard> createState() => _ViagemAdiadaCardState();
 }
 
-class _ViagemMarcadaCardState extends State<ViagemMarcadaCard> {
+class _ViagemAdiadaCardState extends State<ViagemAdiadaCard> {
   Viagem get viagem => widget.viagem;
 
   @override
@@ -87,23 +87,30 @@ class _ViagemMarcadaCardState extends State<ViagemMarcadaCard> {
                 fontSize: 18,
               ),
             ),
-            const SizedBox(height: 16),
+
+            const SizedBox(height: 5),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 5),
               child: ElevatedButton(
                 onPressed: () => {},
-                child: const Text('cancelar'),
+                child: const Text('Cancelar'),
                 style: ElevatedButton.styleFrom(
                   primary: CoresApp.lightRed,
                 ),
               ),
+
+            ),
+            const SizedBox(height: 5),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 5),
               child: ElevatedButton(
                 onPressed: () => {},
-                child: const Text('aceitar'),
+                child: const Text('Aceitar'),
                 style: ElevatedButton.styleFrom(
-                  primary: CoresApp.lightRed,
+                  primary: CoresApp.green,
                 ),
               ),
+
             ),
           ],
         ),

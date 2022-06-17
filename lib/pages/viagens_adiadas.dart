@@ -1,24 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:terminal_rodoviario/utils/app_colors.dart';
 import 'package:terminal_rodoviario/widgets/barra_navegacao.dart';
-import 'package:terminal_rodoviario/widgets/viagem_marcada_card.dart';
+import 'package:terminal_rodoviario/widgets/viagens_adiadas_card.dart';
 
 import '../domain/viagem.dart';
 
-class ViagensMarcadas extends StatefulWidget {
-  const ViagensMarcadas({Key? key}) : super(key: key);
+class ViagensAdiadas extends StatefulWidget {
+  const ViagensAdiadas({Key? key}) : super(key: key);
 
   @override
-  State<ViagensMarcadas> createState() => _ViagensMarcadasState();
+  State<ViagensAdiadas> createState() => _ViagensAdiadasState();
 }
 
-class _ViagensMarcadasState extends State<ViagensMarcadas> {
+class _ViagensAdiadasState extends State<ViagensAdiadas> {
   Viagem viagem1 = Viagem(
     destino: "Aracajú - SE",
-    data: "21/06/2022",
-    horario: "08:00",
+    data: " ̶1̶2̶/̶0̶3̶/̶2̶2̶",
+
+    horario: " ̶0̶8̶:̶0̶0̶",
     valor: 70,
-    viacao: "Viação Catedral",
+    viacao: "Viação C tedral",
   );
 
   @override
@@ -45,7 +46,7 @@ class _ViagensMarcadasState extends State<ViagensMarcadas> {
         padding: const EdgeInsets.all(8.0),
         child: ListView(
           children: [
-            ViagemMarcadaCard(
+            ViagemAdiadaCard(
               viagem: viagem1,
             ),
           ],
