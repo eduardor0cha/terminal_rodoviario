@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:terminal_rodoviario/pages/linhas_e_horarios.dart';
+import 'package:terminal_rodoviario/pages/viagens_adiadas.dart';
 import 'package:terminal_rodoviario/pages/viagens_marcadas.dart';
 
 import '../utils/app_colors.dart';
@@ -122,15 +123,7 @@ class _BarraNavegacaoState extends State<BarraNavegacao> {
           Navigator.pushReplacement(
             context,
             PageRouteBuilder(
-              pageBuilder: (context, animation1, animation2) => Scaffold(
-                body: Center(
-                  child: Text(
-                    'Página 4',
-                    style: TextStyle(color: CoresApp.black),
-                  ),
-                ),
-                bottomNavigationBar: const BarraNavegacao(index: 4),
-              ),
+              pageBuilder: (context, animation1, animation2) => const ViagensAdiadas(),
               transitionDuration: Duration.zero,
               reverseTransitionDuration: Duration.zero,
             ),

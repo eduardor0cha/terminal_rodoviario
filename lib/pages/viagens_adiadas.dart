@@ -53,7 +53,7 @@ class _ViagensAdiadasState extends State<ViagensAdiadas> {
         ),
       ),
       bottomNavigationBar: const BarraNavegacao(
-        index: 2,
+        index: 4,
       ),
     );
   }
