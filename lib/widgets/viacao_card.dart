@@ -44,14 +44,20 @@ class _ViacaoCardState extends State<ViacaoCard> {
                   ),
                   IconButton(
                       onPressed: () => {
-                            Navigator.pushReplacement(context,
-                                MaterialPageRoute(builder: (context) {
-                              return DetalhesLinhasEHorarios(
-                                viacao: viacao,
-                              );
-                            }))
+                            Navigator.pushReplacement(
+                              context,
+                              PageRouteBuilder(
+                                pageBuilder:
+                                    (context, animation1, animation2) =>
+                                        DetalhesLinhasEHorarios(
+                                  viacao: viacao,
+                                ),
+                                transitionDuration: Duration.zero,
+                                reverseTransitionDuration: Duration.zero,
+                              ),
+                            ),
                           },
-                      icon: Icon(Icons.open_in_new))
+                      icon: const Icon(Icons.open_in_new))
                 ],
               ),
             ),

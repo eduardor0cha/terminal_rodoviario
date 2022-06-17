@@ -34,6 +34,11 @@ class _BarraNavegacaoState extends State<BarraNavegacao> {
           label: "Home",
         ),
         BottomNavigationBarItem(
+          icon: Icon(Icons.search),
+          activeIcon: Icon(Icons.search),
+          label: "Pesquisar",
+        ),
+        BottomNavigationBarItem(
           icon: Icon(Icons.event_note_outlined),
           activeIcon: Icon(Icons.event_note),
           label: "Linhas e horários",
@@ -56,42 +61,80 @@ class _BarraNavegacaoState extends State<BarraNavegacao> {
     if (widget.index != index) {
       switch (index) {
         case 0:
-          Navigator.pushReplacement(context,
-              MaterialPageRoute(builder: (context) {
-            return Scaffold(
-              body: Center(
-                child: Text(
-                  'Página 0',
-                  style: TextStyle(color: CoresApp.black),
+          Navigator.pushReplacement(
+            context,
+            PageRouteBuilder(
+              pageBuilder: (context, animation1, animation2) => Scaffold(
+                body: Center(
+                  child: Text(
+                    'Página 0',
+                    style: TextStyle(color: CoresApp.black),
+                  ),
                 ),
+                bottomNavigationBar: const BarraNavegacao(index: 0),
               ),
-            );
-          }));
+              transitionDuration: Duration.zero,
+              reverseTransitionDuration: Duration.zero,
+            ),
+          );
           break;
         case 1:
-          Navigator.pushReplacement(context,
-              MaterialPageRoute(builder: (context) {
-            return LinhasEHorarios();
-          }));
+          Navigator.pushReplacement(
+            context,
+            PageRouteBuilder(
+              pageBuilder: (context, animation1, animation2) => Scaffold(
+                body: Center(
+                  child: Text(
+                    'Página 1',
+                    style: TextStyle(color: CoresApp.black),
+                  ),
+                ),
+                bottomNavigationBar: const BarraNavegacao(index: 1),
+              ),
+              transitionDuration: Duration.zero,
+              reverseTransitionDuration: Duration.zero,
+            ),
+          );
           break;
         case 2:
-          Navigator.pushReplacement(context,
-              MaterialPageRoute(builder: (context) {
-            return const ViagensMarcadas();
-          }));
+          Navigator.pushReplacement(
+            context,
+            PageRouteBuilder(
+              pageBuilder: (context, animation1, animation2) =>
+                  const LinhasEHorarios(),
+              transitionDuration: Duration.zero,
+              reverseTransitionDuration: Duration.zero,
+            ),
+          );
           break;
         case 3:
-          Navigator.pushReplacement(context,
-              MaterialPageRoute(builder: (context) {
-            return Scaffold(
-              body: Center(
-                child: Text(
-                  'Página 3',
-                  style: TextStyle(color: CoresApp.black),
+          Navigator.pushReplacement(
+            context,
+            PageRouteBuilder(
+              pageBuilder: (context, animation1, animation2) =>
+                  const ViagensMarcadas(),
+              transitionDuration: Duration.zero,
+              reverseTransitionDuration: Duration.zero,
+            ),
+          );
+          break;
+        case 4:
+          Navigator.pushReplacement(
+            context,
+            PageRouteBuilder(
+              pageBuilder: (context, animation1, animation2) => Scaffold(
+                body: Center(
+                  child: Text(
+                    'Página 4',
+                    style: TextStyle(color: CoresApp.black),
+                  ),
                 ),
+                bottomNavigationBar: const BarraNavegacao(index: 4),
               ),
-            );
-          }));
+              transitionDuration: Duration.zero,
+              reverseTransitionDuration: Duration.zero,
+            ),
+          );
           break;
         default:
       }

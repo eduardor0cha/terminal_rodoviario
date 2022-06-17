@@ -40,10 +40,11 @@ class _DetalhesLinhasEHorariosState extends State<DetalhesLinhasEHorarios> {
               child: const Icon(Icons.close),
               onPressed: () => Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return const LinhasEHorarios();
-                  },
+                PageRouteBuilder(
+                  pageBuilder: (context, animation1, animation2) =>
+                      const LinhasEHorarios(),
+                  transitionDuration: Duration.zero,
+                  reverseTransitionDuration: Duration.zero,
                 ),
               ),
               style: ElevatedButton.styleFrom(
@@ -93,7 +94,7 @@ class _DetalhesLinhasEHorariosState extends State<DetalhesLinhasEHorarios> {
           ),
         ],
       ),
-      bottomNavigationBar: const BarraNavegacao(index: 1),
+      bottomNavigationBar: const BarraNavegacao(index: 2),
     );
   }
 
