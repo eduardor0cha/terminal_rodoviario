@@ -26,22 +26,16 @@ class _MainMenuCardState extends State<MainMenuCard> {
             buildImage(),
           ],
         ),
-
       ),
     );
   }
 
   buildImage() {
     return Stack(
-
       alignment: FractionalOffset.bottomLeft,
-
       children: [
-
         ClipRRect(
-
           child: Image.network(widget.pesquisa.imagem),
-
         ),
         Container(
           child: Column(
@@ -49,14 +43,15 @@ class _MainMenuCardState extends State<MainMenuCard> {
             children: [
               const Padding(
                 padding: EdgeInsets.only(left: 15),
-                child: Text('Qual o seu destino?',
+                child: Text(
+                  'Qual o seu destino?',
                   style: TextStyle(
-                    fontSize: 15, color: Colors.white, fontWeight: FontWeight.bold,
+                    fontSize: 15,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
-
-
               TextField(
                 textAlign: TextAlign.left,
                 style: const TextStyle(color: Colors.white),
@@ -67,7 +62,7 @@ class _MainMenuCardState extends State<MainMenuCard> {
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(24),
                     borderSide: const BorderSide(
-                        color: Colors.transparent,
+                      color: Colors.transparent,
                     ),
                   ),
                   border: const OutlineInputBorder(),
@@ -85,7 +80,6 @@ class _MainMenuCardState extends State<MainMenuCard> {
           ),*/
           margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-
         ),
       ],
     );

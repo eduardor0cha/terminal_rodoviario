@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:terminal_rodoviario/domain/pesquisa.dart';
 import 'package:terminal_rodoviario/pages/linhas_e_horarios.dart';
+import 'package:terminal_rodoviario/pages/pesquisa_pagina.dart';
+import 'package:terminal_rodoviario/pages/promocoes.dart';
 import 'package:terminal_rodoviario/pages/viagens_adiadas.dart';
 import 'package:terminal_rodoviario/pages/viagens_marcadas.dart';
+import 'package:terminal_rodoviario/widgets/pesquisa_card.dart';
 
 import '../utils/app_colors.dart';
 
@@ -24,7 +28,7 @@ class _BarraNavegacaoState extends State<BarraNavegacao> {
       unselectedItemColor: CoresApp.white,
       iconSize: 30,
       selectedIconTheme: const IconThemeData(size: 35),
-      showSelectedLabels: false,
+      showSelectedLabels: true,
       showUnselectedLabels: false,
       currentIndex: widget.index,
       onTap: (index) => handleTap(index),
@@ -42,17 +46,17 @@ class _BarraNavegacaoState extends State<BarraNavegacao> {
         BottomNavigationBarItem(
           icon: Icon(Icons.event_note_outlined),
           activeIcon: Icon(Icons.event_note),
-          label: "Linhas e horários",
+          label: "Linhas",
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.event_available_outlined),
           activeIcon: Icon(Icons.event_available),
-          label: "Viagens marcadas",
+          label: "Marcadas",
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.event_busy_outlined),
           activeIcon: Icon(Icons.event_busy),
-          label: "Viagens adiadas",
+          label: "Adiadas",
         ),
       ],
     );
@@ -65,15 +69,8 @@ class _BarraNavegacaoState extends State<BarraNavegacao> {
           Navigator.pushReplacement(
             context,
             PageRouteBuilder(
-              pageBuilder: (context, animation1, animation2) => Scaffold(
-                body: Center(
-                  child: Text(
-                    'Página 0',
-                    style: TextStyle(color: CoresApp.black),
-                  ),
-                ),
-                bottomNavigationBar: const BarraNavegacao(index: 0),
-              ),
+              pageBuilder: (context, animation1, animation2) =>
+                  const Promocoes(),
               transitionDuration: Duration.zero,
               reverseTransitionDuration: Duration.zero,
             ),
@@ -83,15 +80,8 @@ class _BarraNavegacaoState extends State<BarraNavegacao> {
           Navigator.pushReplacement(
             context,
             PageRouteBuilder(
-              pageBuilder: (context, animation1, animation2) => Scaffold(
-                body: Center(
-                  child: Text(
-                    'Página 1',
-                    style: TextStyle(color: CoresApp.black),
-                  ),
-                ),
-                bottomNavigationBar: const BarraNavegacao(index: 1),
-              ),
+              pageBuilder: (context, animation1, animation2) =>
+                  const PesquisaPagina(),
               transitionDuration: Duration.zero,
               reverseTransitionDuration: Duration.zero,
             ),
@@ -123,7 +113,8 @@ class _BarraNavegacaoState extends State<BarraNavegacao> {
           Navigator.pushReplacement(
             context,
             PageRouteBuilder(
-              pageBuilder: (context, animation1, animation2) => const ViagensAdiadas(),
+              pageBuilder: (context, animation1, animation2) =>
+                  const ViagensAdiadas(),
               transitionDuration: Duration.zero,
               reverseTransitionDuration: Duration.zero,
             ),

@@ -1,32 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:terminal_rodoviario/domain/pesquisa.dart';
-import 'package:terminal_rodoviario/widgets/viagem_marcada_card.dart';
 import '../utils/app_colors.dart';
 import '../widgets/barra_navegacao.dart';
-import '../widgets/main_menu-card.dart';
+import '../widgets/pesquisa_card.dart';
 
-class MainMenu extends StatefulWidget {
-  const MainMenu({Key? key}) : super(key: key);
+class PesquisaPagina extends StatefulWidget {
+  const PesquisaPagina({Key? key}) : super(key: key);
 
   @override
-  _MainMenuState createState() => _MainMenuState();
+  _PesquisaPaginaState createState() => _PesquisaPaginaState();
 }
 
-class _MainMenuState extends State<MainMenu> {
+class _PesquisaPaginaState extends State<PesquisaPagina> {
   Pesquisa pesquisa1 = Pesquisa(
-    imagem: "https://agenciabrasilia.df.gov.br/wp-conteudo/uploads/2019/10/entorno.jpg",
-    pergunta: 'Qual o seu destino?', 
+    imagem:
+        "https://agenciabrasilia.df.gov.br/wp-conteudo/uploads/2019/10/entorno.jpg",
+    pergunta: 'Qual o seu destino?',
     resposta: 'Pesquise aqui...',
   );
 
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFE6E6E6),
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(100),
         child: Padding(
-          padding: const EdgeInsets.only(bottom: 0, right: 16, left: 16, top: 16),
+          padding:
+              const EdgeInsets.only(bottom: 0, right: 16, left: 16, top: 16),
           child: AppBar(
             centerTitle: true,
             backgroundColor: Colors.transparent,
@@ -50,9 +51,8 @@ class _MainMenuState extends State<MainMenu> {
         ),
       ),
       bottomNavigationBar: const BarraNavegacao(
-        index: 2,
-      ),  
+        index: 1,
+      ),
     );
   }
-
 }

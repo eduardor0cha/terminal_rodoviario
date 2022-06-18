@@ -15,6 +15,5 @@ class Opcao {
     required this.valor,
     required this.viacao,
     required this.desconto,
-
   });
 }

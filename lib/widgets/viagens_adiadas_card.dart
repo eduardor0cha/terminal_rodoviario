@@ -87,7 +87,6 @@ class _ViagemAdiadaCardState extends State<ViagemAdiadaCard> {
                 fontSize: 18,
               ),
             ),
-
             const SizedBox(height: 5),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 5),
@@ -98,7 +97,6 @@ class _ViagemAdiadaCardState extends State<ViagemAdiadaCard> {
                   primary: CoresApp.lightRed,
                 ),
               ),
-
             ),
             const SizedBox(height: 5),
             Padding(
@@ -110,7 +108,6 @@ class _ViagemAdiadaCardState extends State<ViagemAdiadaCard> {
                   primary: CoresApp.green,
                 ),
               ),
-
             ),
           ],
         ),

@@ -94,7 +94,6 @@ class _PromocoesCardState extends State<PromocoesCard> {
               style: TextStyle(
                 color: CoresApp.green,
                 fontSize: 18,
-
               ),
             ),
           ],
