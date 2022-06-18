@@ -52,7 +52,7 @@ class _ViagensMarcadasState extends State<ViagensMarcadas> {
         ),
       ),
       bottomNavigationBar: const BarraNavegacao(
-        index: 2,
+        index: 3,
       ),
     );
   }
