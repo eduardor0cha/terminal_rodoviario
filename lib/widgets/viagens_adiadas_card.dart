@@ -48,26 +48,50 @@ class _ViagemAdiadaCardState extends State<ViagemAdiadaCard> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Icon(Icons.calendar_month_outlined),
                     const SizedBox(width: 4),
-                    Text(
-                      viagem.data,
-                      style: const TextStyle(
-                        fontSize: 18,
-                      ),
+                    Column(
+                      children: [
+                        Text(
+                          viagem.dataAntiga,
+                          style: const TextStyle(
+                            fontSize: 18,
+                            decoration: TextDecoration.lineThrough,
+                          ),
+                        ),
+                        Text(
+                          viagem.data,
+                          style: const TextStyle(
+                            fontSize: 18,
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
                 Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Icon(Icons.schedule_outlined),
                     const SizedBox(width: 4),
-                    Text(
-                      viagem.horario,
-                      style: const TextStyle(
-                        fontSize: 18,
-                      ),
+                    Column(
+                      children: [
+                        Text(
+                          viagem.horarioAntigo,
+                          style: const TextStyle(
+                            fontSize: 18,
+                            decoration: TextDecoration.lineThrough,
+                          ),
+                        ),
+                        Text(
+                          viagem.horario,
+                          style: const TextStyle(
+                            fontSize: 18,
+                          ),
+                        )
+                      ],
                     ),
                   ],
                 ),
@@ -88,26 +112,35 @@ class _ViagemAdiadaCardState extends State<ViagemAdiadaCard> {
               ),
             ),
             const SizedBox(height: 5),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 5),
-              child: ElevatedButton(
-                onPressed: () => {},
-                child: const Text('Cancelar'),
-                style: ElevatedButton.styleFrom(
-                  primary: CoresApp.lightRed,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 5),
+                    child: ElevatedButton(
+                      onPressed: () => {},
+                      child: const Text('Cancelar'),
+                      style: ElevatedButton.styleFrom(
+                        primary: CoresApp.lightRed,
+                      ),
+                    ),
+                  ),
                 ),
-              ),
-            ),
-            const SizedBox(height: 5),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 5),
-              child: ElevatedButton(
-                onPressed: () => {},
-                child: const Text('Aceitar'),
-                style: ElevatedButton.styleFrom(
-                  primary: CoresApp.green,
+                const SizedBox(width: 4),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 5),
+                    child: ElevatedButton(
+                      onPressed: () => {},
+                      child: const Text('Aceitar'),
+                      style: ElevatedButton.styleFrom(
+                        primary: CoresApp.green,
+                      ),
+                    ),
+                  ),
                 ),
-              ),
+              ],
             ),
           ],
         ),

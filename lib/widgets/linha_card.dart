@@ -58,7 +58,7 @@ class _LinhaCardState extends State<LinhaCard> {
             ),
             Row(
               children: [
-                Icon(Icons.payments),
+                const Icon(Icons.payments),
                 const SizedBox(
                   width: 16,
                 ),

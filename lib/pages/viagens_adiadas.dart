@@ -14,11 +14,13 @@ class ViagensAdiadas extends StatefulWidget {
 
 class _ViagensAdiadasState extends State<ViagensAdiadas> {
   Viagem viagem1 = Viagem(
-    destino: "Aracajú - SE",
-    data: "1̶2̶/̶0̶3̶/̶2̶2̶",
-    horario: " ̶0̶8̶:̶0̶0̶",
-    valor: 70,
-    viacao: "Viação C tedral",
+    destino: "Salvador - BA",
+    dataAntiga: "03/06/22",
+    data: "14/06/22",
+    horarioAntigo: "09:00",
+    horario: "20:00",
+    valor: 240,
+    viacao: "Viação Cometa",
   );
 
   @override

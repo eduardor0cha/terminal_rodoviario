@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:terminal_rodoviario/domain/pesquisa.dart';
 import 'package:terminal_rodoviario/pages/linhas_e_horarios.dart';
 import 'package:terminal_rodoviario/pages/pesquisa_pagina.dart';
 import 'package:terminal_rodoviario/pages/promocoes.dart';
 import 'package:terminal_rodoviario/pages/viagens_adiadas.dart';
 import 'package:terminal_rodoviario/pages/viagens_marcadas.dart';
-import 'package:terminal_rodoviario/widgets/pesquisa_card.dart';
 
 import '../utils/app_colors.dart';
 
@@ -27,6 +25,7 @@ class _BarraNavegacaoState extends State<BarraNavegacao> {
       selectedItemColor: CoresApp.white,
       unselectedItemColor: CoresApp.white,
       iconSize: 30,
+      selectedFontSize: 12,
       selectedIconTheme: const IconThemeData(size: 35),
       showSelectedLabels: true,
       showUnselectedLabels: false,

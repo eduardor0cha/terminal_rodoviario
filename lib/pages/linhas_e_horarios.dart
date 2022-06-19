@@ -31,7 +31,7 @@ class _LinhasEHorariosState extends State<LinhasEHorarios> {
         valor: 3.50,
       ),
       Linha(
-        pontoA: "IFAL",
+        pontoA: "Shopping",
         pontoB: "Terminal",
         horarios: [
           "07:00",
@@ -39,18 +39,7 @@ class _LinhasEHorariosState extends State<LinhasEHorarios> {
           "08:00",
           "08:30",
         ],
-        valor: 3.50,
-      ),
-      Linha(
-        pontoA: "IFAL",
-        pontoB: "Terminal",
-        horarios: [
-          "07:00",
-          "07:15",
-          "08:00",
-          "08:30",
-        ],
-        valor: 3.50,
+        valor: 4.00,
       ),
     ],
   );

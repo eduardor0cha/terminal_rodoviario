@@ -15,10 +15,22 @@ class ViagensMarcadas extends StatefulWidget {
 class _ViagensMarcadasState extends State<ViagensMarcadas> {
   Viagem viagem1 = Viagem(
     destino: "Aracajú - SE",
+    dataAntiga: "21/06/2022",
     data: "21/06/2022",
+    horarioAntigo: "08:00",
     horario: "08:00",
     valor: 70,
     viacao: "Viação Catedral",
+  );
+
+  Viagem viagem2 = Viagem(
+    destino: "Recife - PE",
+    dataAntiga: "25/07/2022",
+    data: "25/07/2022",
+    horarioAntigo: "11:00",
+    horario: "11:00",
+    valor: 90,
+    viacao: "Viação Estrela",
   );
 
   @override
@@ -47,6 +59,9 @@ class _ViagensMarcadasState extends State<ViagensMarcadas> {
           children: [
             ViagemMarcadaCard(
               viagem: viagem1,
+            ),
+            ViagemMarcadaCard(
+              viagem: viagem2,
             ),
           ],
         ),

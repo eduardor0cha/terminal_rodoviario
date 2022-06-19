@@ -1,9 +1,9 @@
 class Viagem {
   final String destino;
   final String data;
-  String? dataAntiga;
+  final String dataAntiga;
   final String horario;
-  String? horarioAntigo;
+  final String horarioAntigo;
   final double valor;
   final String viacao;
 
@@ -13,7 +13,7 @@ class Viagem {
     required this.horario,
     required this.valor,
     required this.viacao,
-    String? dataAntiga,
-    String? horarioAntigo,
+    required this.dataAntiga,
+    required this.horarioAntigo,
   });
 }
