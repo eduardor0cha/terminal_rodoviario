@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:terminal_rodoviario/widgets/barra_navegacao.dart';
 import 'package:terminal_rodoviario/widgets/viacao_card.dart';
 
 import '../domain/linha.dart';
 import '../domain/viacao.dart';
-import '../utils/app_colors.dart';
 
 class LinhasEHorarios extends StatefulWidget {
   const LinhasEHorarios({Key? key}) : super(key: key);

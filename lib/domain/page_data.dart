@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:terminal_rodoviario/utils/app_colors.dart';
 
 class PageData {
   final Widget widget;
@@ -13,6 +12,6 @@ class PageData {
     required this.title,
     this.appbarColor = Colors.transparent,
     this.titleColor = Colors.black,
-    this.titleFontSize = 14,
+    this.titleFontSize = 18,
   });
 }

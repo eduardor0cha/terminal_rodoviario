@@ -4,8 +4,6 @@ import 'package:terminal_rodoviario/widgets/linha_card.dart';
 import '../domain/linha.dart';
 import '../domain/viacao.dart';
 import '../utils/app_colors.dart';
-import '../widgets/barra_navegacao.dart';
-import 'linhas_e_horarios.dart';
 
 class DetalhesLinhasEHorarios extends StatefulWidget {
   final Viacao viacao;
@@ -38,19 +36,10 @@ class _DetalhesLinhasEHorariosState extends State<DetalhesLinhasEHorarios> {
             elevation: 0,
             leading: ElevatedButton(
               child: const Icon(Icons.close),
-              onPressed: () => Navigator.pushReplacement(
-                context,
-                PageRouteBuilder(
-                  pageBuilder: (context, animation1, animation2) =>
-                      const LinhasEHorarios(),
-                  transitionDuration: Duration.zero,
-                  reverseTransitionDuration: Duration.zero,
-                ),
-              ),
+              onPressed: () => Navigator.pop(context),
               style: ElevatedButton.styleFrom(
                 shape: const CircleBorder(),
-                primary:
-                    CoresApp.lightRed, // <-- Button color/ <-- Splash color
+                primary: CoresApp.lightRed,
               ),
             ),
             title: Row(
@@ -94,7 +83,6 @@ class _DetalhesLinhasEHorariosState extends State<DetalhesLinhasEHorarios> {
           ),
         ],
       ),
-      bottomNavigationBar: const BarraNavegacao(index: 2),
     );
   }
 

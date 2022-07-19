@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:terminal_rodoviario/utils/app_colors.dart';
-import 'package:terminal_rodoviario/widgets/barra_navegacao.dart';
 import 'package:terminal_rodoviario/widgets/viagem_marcada_card.dart';
 
 import '../domain/viagem.dart';

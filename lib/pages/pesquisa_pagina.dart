@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:terminal_rodoviario/domain/pesquisa.dart';
-import '../utils/app_colors.dart';
-import '../widgets/barra_navegacao.dart';
 import '../widgets/pesquisa_card.dart';
 
 class PesquisaPagina extends StatefulWidget {
