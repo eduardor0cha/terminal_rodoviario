@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:terminal_rodoviario/utils/app_colors.dart';
-import 'package:terminal_rodoviario/widgets/barra_navegacao.dart';
 import 'package:terminal_rodoviario/widgets/promocoes_card.dart';
 
 import '../domain/opcao.dart';
 
 class Promocoes extends StatefulWidget {
+  static const name = "Promoções";
+
   const Promocoes({Key? key}) : super(key: key);
 
   @override
@@ -56,51 +57,31 @@ class _PromocoesState extends State<Promocoes> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xFFE6E6E6),
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(100),
-        child: AppBar(
-          centerTitle: true,
-          backgroundColor: CoresApp.lightRed,
-          systemOverlayStyle: null,
-          elevation: 0,
-          title: Text(
-            'Terminal Rodoviário \n Arapiraca',
-            textAlign: TextAlign.center,
-            style: TextStyle(color: CoresApp.white, fontSize: 22),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: ListView(
+        children: [
+          Text(
+            'RECOMENDADOS',
+            style: TextStyle(color: CoresApp.black, fontSize: 18),
           ),
-        ),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: ListView(
-          children: [
-            Text(
-              'RECOMENDADOS',
-              style: TextStyle(color: CoresApp.black, fontSize: 18),
-            ),
-            PromocoesCard(
-              opcao: opcao1,
-            ),
-            PromocoesCard(
-              opcao: opcao2,
-            ),
-            Text(
-              'OFERTAS',
-              style: TextStyle(color: CoresApp.black, fontSize: 18),
-            ),
-            PromocoesCard(
-              opcao: opcao3,
-            ),
-            PromocoesCard(
-              opcao: opcao4,
-            ),
-          ],
-        ),
-      ),
-      bottomNavigationBar: const BarraNavegacao(
-        index: 0,
+          PromocoesCard(
+            opcao: opcao1,
+          ),
+          PromocoesCard(
+            opcao: opcao2,
+          ),
+          Text(
+            'OFERTAS',
+            style: TextStyle(color: CoresApp.black, fontSize: 18),
+          ),
+          PromocoesCard(
+            opcao: opcao3,
+          ),
+          PromocoesCard(
+            opcao: opcao4,
+          ),
+        ],
       ),
     );
   }
